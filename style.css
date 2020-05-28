@@ -6,8 +6,8 @@
 
 body{
     font-family: 'Roboto', sans-serif;
-    margin: auto;
     font-weight: 200;
+   
 }
 
 :root{
@@ -64,7 +64,7 @@ a{
 /*BANNER*/
 
 .container {
-    margin-top: 100px;
+    margin: 100px 0;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -119,7 +119,8 @@ a{
     background: var(--color-primary);
     padding: 200px 50px;
     margin-top: 100px;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     height: 800px;
 }
 
@@ -138,7 +139,7 @@ a{
     border-radius: 50%;
     color: var(--color-third);
     padding: 30px;
-    font-size: 100px;
+    font-size: 50px;
     margin-bottom: 50px;
 }
 
@@ -166,16 +167,15 @@ a{
 .container-resource{
     background: var(--color-fifth);
     display: flex;
-    justify-content: space-evenly;
-    margin: 100px 0;
-    padding: 100px;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px;
 }
 
 .resource{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
-    margin-right: 100px;
 }
 
 .resource-container{
@@ -193,6 +193,7 @@ a{
 }
 
 .resource-info{
+    margin-left: 20px;
     margin-top: 100px;
     color: var(--color-primary);
     text-align: center;
@@ -225,14 +226,13 @@ a{
 
 .container-service{
     display: flex;
-    justify-content: space-around;
     align-items: center;
     margin-bottom: 100px;
 }
 
 .container-service-img{
-    width: 700px;
-    height: 700px;
+    width: 600px;
+    height: 500px;
 }
 
 .service-skills{
@@ -281,10 +281,35 @@ a{
     justify-content: space-evenly;
 }
 
+@media (max-width: 900px){
+     .cards{
+        grid-template-columns: 1fr;
+        height: 2000px;
+    }
 
+    .resource{
+        grid-template-columns: 1fr;
+    }
 
+    .container-service{
+        flex-direction: column;
+    }
 
+    .footer{
+        text-align: center;
+        grid-template-columns: 1fr;
+    }
+    
+}
 
+@media (max-width: 600px){
+    body{
+        width: 588px;
+    }
 
+    .container-resource{
+       flex-direction: column;
+    }
+}
 
 
