@@ -228,6 +228,7 @@ a{
     display: flex;
     align-items: center;
     margin-bottom: 100px;
+    justify-content: space-around;
 }
 
 .container-service-img{
